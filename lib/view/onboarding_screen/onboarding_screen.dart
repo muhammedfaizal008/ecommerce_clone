@@ -40,7 +40,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         ),
         actions: [
           InkWell(
-            onTap: (){},
+            onTap: (){
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginScreen(),));
+            },
             child: Text("Skip",style: GoogleFonts.montserrat(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
@@ -50,33 +52,35 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           SizedBox(width: 17,)
         ],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Image.asset(
-            height: 300,
-            width: 300,
-            ImageConstant.ONBOARDING1),
-          SizedBox(height: 15,),
-          Text("Choose Product",style: GoogleFonts.montserrat(
-            fontSize: 24,
-            fontWeight: FontWeight.w800
-          ),),
-          SizedBox(height: 10,),
-          Padding(
-            padding: const EdgeInsets.only(left: 17,right: 18),
-            child: Text("Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
-            textAlign: TextAlign.center,
-            style: GoogleFonts.monomaniacOne(fontSize: 14,
-            color: Color(0xffA8A8A9),
-            fontWeight: FontWeight.normal
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.asset(
+              height: 300,
+              width: 300,
+              ImageConstant.ONBOARDING1),
+            SizedBox(height: 15,),
+            Text("Choose Product",style: GoogleFonts.montserrat(
+              fontSize: 24,
+              fontWeight: FontWeight.w800
+            ),),
+            SizedBox(height: 10,),
+            Padding(
+              padding: const EdgeInsets.only(left: 17,right: 18),
+              child: Text("Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+              textAlign: TextAlign.center,
+              style: GoogleFonts.monomaniacOne(fontSize: 14,
+              color: Color(0xffA8A8A9),
+              fontWeight: FontWeight.normal
+              ),
+              ),
             ),
-            ),
-          ),
-          
-          
-        ],
+            
+            
+          ],
+        ),
       ),
       bottomNavigationBar: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -98,7 +102,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 padding: const EdgeInsets.only(right: 19,bottom: 22),
                 child: InkWell(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen(),));
+                    
                   },
                   child: Text("Next",style: GoogleFonts.montserrat(
                     fontSize: 18,
