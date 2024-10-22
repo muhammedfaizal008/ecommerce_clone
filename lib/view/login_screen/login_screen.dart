@@ -5,6 +5,7 @@ import 'package:ecommerce_clone/view/get_started_screen/get_started_screen.dart'
 import 'package:ecommerce_clone/view/global_widgets/custom_button.dart';
 import 'package:ecommerce_clone/view/global_widgets/custom_input_field.dart';
 import 'package:ecommerce_clone/view/global_widgets/custom_social_media_logo.dart';
+import 'package:ecommerce_clone/view/login_screen/forgot_password_screen.dart';
 import 'package:ecommerce_clone/view/login_screen/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -47,11 +48,16 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(right: 25,top: 9),
-                child: Text("Forgot Password?",style: GoogleFonts.montserrat(
-                  fontWeight: FontWeight.normal,
-                  fontSize: 12,
-                  color: ColorConstants.PRIMARYCOLOR
-                ),),
+                child: InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPasswordScreen(),));
+                  },
+                  child: Text("Forgot Password?",style: GoogleFonts.montserrat(
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
+                    color: ColorConstants.PRIMARYCOLOR
+                  ),),
+                ),
               )
             ],
           ),
