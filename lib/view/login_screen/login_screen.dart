@@ -1,9 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:ecommerce_clone/utils/color_constants.dart';
+import 'package:ecommerce_clone/view/get_started_screen/get_started_screen.dart';
 import 'package:ecommerce_clone/view/global_widgets/custom_button.dart';
 import 'package:ecommerce_clone/view/global_widgets/custom_input_field.dart';
-import 'package:ecommerce_clone/view/global_widgets/social_media_logo.dart';
+import 'package:ecommerce_clone/view/global_widgets/custom_social_media_logo.dart';
+import 'package:ecommerce_clone/view/login_screen/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -55,46 +57,16 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 29,right: 29,top: 52),
-            child: Custombutton(),
+            child: Custombutton(text_inside: "Login",onTap: () {
+              Navigator.pushAndRemoveUntil(context,MaterialPageRoute(builder: (context) => GetStartedScreen(),), (route) => false,);
+            },
+            
+            ),
           ),
           SizedBox(height:75,),
-          Center(child: Text("-OR Continue with-",style: GoogleFonts.montserrat(
-            fontSize: 12,
-            fontWeight: FontWeight.w400,
-            color: ColorConstants.GREYCOLORSHD3
-          ),)),
-          SizedBox(height:20,),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Socialmedialogo(assets: "assets/images/Frame 4.png",),
-              SizedBox(width: 10,),
-              Socialmedialogo(assets:"assets/images/Group.png" ,),
-              SizedBox(width: 10,),
-              Socialmedialogo(assets: "assets/images/facebook-app-symbol 1.png",),
-            ],
-          ),
-          SizedBox(height: 28,),
-          Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("Create An Account ",style: GoogleFonts.montserrat(
-                fontSize: 12,
-                fontWeight: FontWeight.w400,
-                color: ColorConstants.GREYCOLORSHD3
-                ),
-                ),
-                Text("Sign Up ",style: GoogleFonts.montserrat(
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-                color: ColorConstants.PRIMARYCOLOR,
-                
-                ),
-                ),
-              ],
-            )
-          ),
+          CustomSocialMediaLogo(text1: "Create an Account ",text2: "Sign Up",onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpScreen(),));
+          },),
         ],
       ),
     );
@@ -103,5 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
 
 
+
+    
 
 
