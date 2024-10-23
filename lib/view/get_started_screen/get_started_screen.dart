@@ -3,6 +3,7 @@
 import 'package:ecommerce_clone/utils/color_constants.dart';
 import 'package:ecommerce_clone/utils/image_constant.dart';
 import 'package:ecommerce_clone/view/global_widgets/custom_button.dart';
+import 'package:ecommerce_clone/view/home_screen/home_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -53,7 +54,9 @@ class GetStartedScreen extends StatelessWidget {
                     color: ColorConstants.WHITESHD1,
                     ),),
                     SizedBox(height: 44,),
-                    Custombutton(text_inside: "Get Started")
+                    Custombutton(text_inside: "Get Started",onTap: () {
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen(),));
+                    },)
                 ],
               )
             ),          
