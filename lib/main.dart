@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:ecommerce_clone/utils/color_constants.dart';
 import 'package:ecommerce_clone/view/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,9 +13,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+    return SafeArea(
+      child: MaterialApp(
+        theme: ThemeData(scaffoldBackgroundColor:ColorConstants.SCAFFOLDCOLOR),
+        debugShowCheckedModeBanner: false,
+        home: SplashScreen(),
+      ),
     );
   }
 }

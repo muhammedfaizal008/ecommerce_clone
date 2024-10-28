@@ -11,5 +11,7 @@ class ColorConstants{
  static const Color WHITESHD1= Color(0xffF2F2F2);
  static const Color HOMESCREENLOGO= Color(0xff4392F9);
  static const Color BLACK= Color(0xff000000);
+ static const Color SCAFFOLDCOLOR= Color(0xffF9F9F9);
+ static const Color FEATURESLISTCOLOR= Color(0xff21003D);
  
 }
