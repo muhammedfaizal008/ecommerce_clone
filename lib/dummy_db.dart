@@ -1,3 +1,6 @@
+import 'package:ecommerce_clone/utils/image_constant.dart';
+import 'package:flutter/material.dart';
+
 class DummyDb {
   List Features = [
     {
@@ -43,6 +46,24 @@ class DummyDb {
     {
       "imageurl": "https://images.pexels.com/photos/2100190/pexels-photo-2100190.jpeg?auto=compress&cs=tinysrgb&w=600",
       "name": "Groceries"
+    }
+  ];
+  List dealoftheday=[
+    {
+      "image":ImageConstant.DEALOFTHEDAY1,
+      "text1":"Women Printed Kurta",
+      "text2":"Neque porro quisquam est qui dolorem ipsum quia",
+      "text3":"₹1500",
+      "text4":"₹2499",
+      "text5":"40%Off",
+    },
+    {
+      "image":ImageConstant.DEALOFTHEDAY2,
+      "text1":"HRX by Hrithik Roshan",
+      "text2":"Neque porro quisquam est qui dolorem ipsum quia",
+      "text3":"₹2500",
+      "text4":"₹4499",
+      "text5":"50%Off",
     }
   ];
 }

@@ -13,5 +13,5 @@ class ColorConstants{
  static const Color BLACK= Color(0xff000000);
  static const Color SCAFFOLDCOLOR= Color(0xffF9F9F9);
  static const Color FEATURESLISTCOLOR= Color(0xff21003D);
- 
+ static const Color ORANGE= Color(0xffFE735C);
 }
